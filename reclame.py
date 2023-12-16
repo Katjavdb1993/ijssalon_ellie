@@ -20,7 +20,7 @@ print(bedragen)
 
 
 def laag_en_hoog(mijn_lijst):
-    return min(mijn_lijst), max(mijn_lijst)
+    return max(mijn_lijst), min(mijn_lijst)
      
 lijst = laag_en_hoog([220, 430, 125, 160, 205, 90, 345])
 
@@ -42,8 +42,9 @@ nieuw = meervoudig([10,5,3,2,1,2,9])
 print(nieuw)
 
 def combinatie(invoer_lijst_2):
-    korte_lijst = meervoudig(invoer_lijst_2) 
-    return mijn_functie_2(max(korte_lijst), min(korte_lijst))
+    korte_lijst = laag_en_hoog(invoer_lijst_2) 
+    uitvoer =  mijn_functie_2(korte_lijst[0], korte_lijst[1])
+    return uitvoer
       
-uitkomst = combinatie([])
+uitkomst = combinatie([25, 5, 10, 12, 16])
 print(uitkomst)
